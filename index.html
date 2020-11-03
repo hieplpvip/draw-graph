@@ -221,6 +221,13 @@
     <script src="bower_components/split.min.js"></script>
     <script src="bower_components/svg-pan-zoom.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js');
+        });
+      }
+    </script>
   </body>
 </html>
 
