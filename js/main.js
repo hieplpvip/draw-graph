@@ -65,7 +65,7 @@ function updateGraph() {
   document.querySelector('#output').classList.add('working');
   document.querySelector('#output').classList.remove('error');
 
-  worker = new Worker('./worker.js');
+  worker = new Worker('worker.js');
 
   worker.onmessage = function (e) {
     document.querySelector('#output').classList.remove('working');
